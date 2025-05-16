@@ -9,7 +9,7 @@ Key Benefits:
 - **Scalability**: Cloud-based solution that grows with your needs
 - **Security**: Your data is securely stored in AWS RDS
 
-![Dashboard Preview](dashboard.png)
+![Dashboard Preview](dashboard.gif)
 
 ## Features
 - **Automated Email Processing:**
