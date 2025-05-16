@@ -1,5 +1,14 @@
 # Job Application Email Processor & Dashboard
 
+A powerful, automated solution for tracking and managing your job applications. This system automatically extracts job application information from your email inbox, stores it in a secure AWS RDS database, and presents it through an intuitive web dashboard. Perfect for job seekers who want to maintain a clear overview of their application status and history.
+
+Key Benefits:
+- **Automation**: No manual data entry needed - automatically extracts job details from your emails
+- **Organization**: Keep track of all your applications in one place
+- **Insights**: Monitor your application status and response rates
+- **Scalability**: Cloud-based solution that grows with your needs
+- **Security**: Your data is securely stored in AWS RDS
+
 ![Dashboard Preview](dashboard.png)
 
 ## Features
@@ -37,7 +46,7 @@
 ```
 
 ### Pipeline Components:
-1. **Gmail Inbox**
+1. **Email Inbox**
    - Source of job application emails
    - Connects via Gmail API
    - Filters for LinkedIn and JobsDB emails
@@ -92,7 +101,7 @@ pip install -r requirements.txt
 Create a `.env` file in the project directory with:
 ```
 EMAIL_ADDRESS=your_gmail_address@gmail.com
-EMAIL_PASSWORD=your_gmail_app_password
+EMAIL_PASSWORD=your_gmail_app_password # e.g xxxx xxxx xxxx xxxx
 DB_HOST=your_aws_rds_endpoint
 DB_USER=your_aws_rds_username
 DB_PASSWORD=your_aws_rds_password
@@ -120,11 +129,46 @@ python app.py
 ```
 Then open [http://localhost:5000](http://localhost:5000) in your browser.
 
+### 6. Automated Email Processing Setup
+To automatically process emails at regular intervals, set up a cron job:
+
+1. **Open your crontab file:**
+```bash
+crontab -e
+```
+
+2. **Add a cron job to run the script every hour:**
+```bash
+0 * * * * cd /path/to/your/project && /usr/bin/python3 process_job_emails.py >> /path/to/your/project/cron.log 2>&1
+```
+
+Or to run it every 30 minutes:
+```bash
+*/30 * * * * cd /path/to/your/project && /usr/bin/python3 process_job_emails.py >> /path/to/your/project/cron.log 2>&1
+```
+
+3. **Verify the cron job is set:**
+```bash
+crontab -l
+```
+
+4. **Check the logs:**
+```bash
+tail -f /path/to/your/project/cron.log
+```
+
+Note: Make sure to:
+- Replace `/path/to/your/project` with your actual project path
+- Ensure the Python script has execute permissions
+- Test the cron job manually first
+- Monitor the logs for any errors
+
 ## Customization
 - **Change the target date:** Edit `TARGET_DATE` in your `.env` file.
 - **Change database/table:** Update your `.env` and SQL queries as needed.
 - **UI tweaks:** Edit `templates/index.html` for custom styles or columns.
 - **AWS Configuration:** Modify AWS region and RDS settings in `.env` file.
+- **Cron Schedule:** Adjust the cron job timing to match your needs
 
 ## Requirements
 - Python 3.7+
@@ -145,4 +189,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Enjoy your automated job application tracker and dashboard!** 
+**Enjoy your automated job application tracker and dashboard!**
