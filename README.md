@@ -76,6 +76,9 @@ Then open [http://localhost:5000](http://localhost:5000) in your browser.
 - Use an [App Password](https://support.google.com/accounts/answer/185833) for Gmail, not your main password.
 - Never commit your `.env` file with real credentials to a public repository.
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ---
 
 **Enjoy your automated job application tracker and dashboard!** 
