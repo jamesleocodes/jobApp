@@ -9,7 +9,7 @@ Key Benefits:
 - **Scalability**: Cloud-based solution that grows with your needs
 - **Security**: Your data is securely stored in AWS RDS
 
-<img src="dashboard.gif" alt="Dashboard Preview" width="800" style="max-width: 100%;">
+<img src="dashboard.png" alt="Dashboard" width="800" style="max-width: 100%;">
 
 ## Features
 - **Automated Email Processing:**
@@ -28,6 +28,11 @@ Key Benefits:
   - Secure connection to AWS RDS MySQL instance.
   - Automated data pipeline for reliable data storage.
   - Cloud-based solution for better scalability and reliability.
+
+## Dashboard Preview
+Here's a demonstration of the dashboard's interactive features:
+
+<img src="dashboard.gif" alt="Dashboard Preview" width="800" style="max-width: 100%;">
 
 ## Data Pipeline Structure
 ```
