@@ -1,6 +1,6 @@
 # Job Application Email Processor & Dashboard
 
-This project automates the extraction of job application data from your email inbox (Gmail) and stores it in a MySQL database. It also provides a modern web dashboard to view, search, and filter your job applications.
+![Dashboard Preview](dashboard.png)
 
 ## Features
 - **Automated Email Processing:**
