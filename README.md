@@ -1,4 +1,4 @@
-# Job Application Email Processor & Dashboard
+# Job Application Tracker & Dashboard
 
 A powerful, automated solution for tracking and managing your job applications. This system automatically extracts job application information from your email inbox, stores it in a secure AWS RDS database, and presents it through an intuitive web dashboard. Perfect for job seekers who want to maintain a clear overview of their application status and history.
 
